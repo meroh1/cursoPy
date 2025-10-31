@@ -1,0 +1,47 @@
+En githubWeb  crear un repositorio
+
+#
+Primera vez en Github 
+    git config --global user.name "meroh1"
+
+    git config --global user.email "info@email.es"
+
+#
+Marcamos la carpeta con GIT.
+    En la terminal nos aseguramos de estar en la carpeta general
+    'py-project' y usamos el code:
+
+        git init 
+
+#
+Que guardaremos en el repositorio?
+    seleccionamos la carpeta a guardar con el code:
+
+    git add .\conceptoPy\   # Tab despues del . para navegar entre carpetas
+
+# UN COMMIT
+Colocamos un titulo y una breve descripcion de que estamos guardando
+en este caso al ser una carpeta, la descripcion e sgeneral;
+si  lo que guardaramos fuera la modificacion de solo 3 archivos entonces
+se coloca el titulo y q se hizo de cambios.
+
+    git commit -m "conceptoPy: primero pasos"
+
+#
+Despues de crear el repositorio en la parte inferior
+deja este code, el cual hara la conexion de nuestros archivos
+con githubWeb, en mi caso es:
+
+    git remote add origin https://github.com/meroh1/cursoPy.git
+
+#
+Enviar informacion a github, co el code:
+
+    git push -u origin master 
+
+    git push origin master
+
+#----------------------
+
+para actualizar el Lector de codigo respecto al repositorio, es con el coed:
+    git pull
