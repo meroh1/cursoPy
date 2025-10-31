@@ -45,3 +45,6 @@ Enviar informacion a github, co el code:
 
 para actualizar el Lector de codigo respecto al repositorio, es con el coed:
     git pull
+
+corregir commit Erroneo
+    git commit --amend -m "txt: corregido"
