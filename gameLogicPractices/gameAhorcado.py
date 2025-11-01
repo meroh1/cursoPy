@@ -1,50 +1,53 @@
+# analizar como funciona y mejorar el codigo
 import random
 
-def palabraAleatoria():
-    listaPalabras = ["python", "java", "javascript", "html", "css"]
+def funcionPalabraRandom():
+    listPalabra = ["mario", "carlos", "felipe", "jeca"]
+    return random.choice(listPalabra)
 
-    #choice -> elige una palabra aleatoria de la lista
-    varPalabra = str(random.choice(listaPalabras))  #str -> convierte la palabra en una cadena de texto
-    
+def funcionProgreso(listAcertadas, varPalabra):
+    varProgreso = ""
 
-    return varPalabra
-
-def juegoAhorcado():
-    varPalabra = palabraAleatoria()
-    varPista = "* " * len(varPalabra)
-    listPalabra = list(varPalabra)
-
-    varIntentos = 1
-    varMaxIntentos = 5
-
-    print(f'''Bienvenido al juego de ahorcado\n
-    Pistas de la palabra:\n
-        - lenguajes de programacion\n
-        - longitud: {varPista}\n   
-        ''')
-    
-    while varIntentos < varMaxIntentos:
-
-        print('-'*10)
-        print(f"Intento: {varIntentos}/{varMaxIntentos}")
-        varUser = input("Ingrese una letra/palabra: ").strip().lower()
-        
-        if varUser == varPalabra:
-            print("Adivinaste la palabra")
-            break
-        elif varUser in listPalabra:
-            print("Letra encontrada")
-            varIntentos += 1
+    for letra in varPalabra:
+        if letra in listAcertadas:
+            varProgreso += letra
         else:
-            print("Incorrecto")
-            varIntentos += 1
+            varProgreso += "_"
+    print(f'Pistas: {varProgreso}')
+    return varProgreso
 
-    print(f"La palabra es: {varPalabra}")
-
-juegoAhorcado()
-
+def ahorcado():
+    print("--------------------------------")
+    print("Bienvenido al juego del ahorcado")
+    print("Adivina la palabra, con tematica de nombres comunes")
     
+    varIntentos = 1
+    varMaxIntentos = 11
+    listAcertadas = []
+
+    listPalabra = str(funcionPalabraRandom())
+    varProgress = str(funcionProgreso(listAcertadas, listPalabra))
+
+    while varProgress != listPalabra and varIntentos < varMaxIntentos:
+        print("--------------------------------")
+        print(f"Intento {varIntentos} de {varMaxIntentos-1}\n")
+        varInput = input("Ingresa una letra: ")
+
+        if varInput.isalpha() and len(varInput) == 1:
+            if varInput in listPalabra:
+                listAcertadas.append(varInput)
+                
+                print("Letra correcta")
+                varProgress = str(funcionProgreso(listAcertadas, listPalabra))
+            else:
+                print("Letra incorrecta")
+        else:
+            print("Ingresa una letra valida")
+        
+        varIntentos += 1
     
+    print("--------------------------------")
+    print("Fin del juego")
+    print(f"La palabra era: {listPalabra}")
 
-
-
+ahorcado()
