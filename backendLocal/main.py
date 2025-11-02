@@ -12,7 +12,16 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 # Inicializamos una variable donde tendrá todas las características de una API REST
-app = FastAPI()
+app = FastAPI(
+    title="API de Cursos",
+    description="API REST para gestionar cursos",
+    version="1.0.0"
+)
+
+# Ruta raíz para verificar que la API está funcionando
+@app.get("/")
+def raiz():
+    return {"message": "API de Cursos funcionando correctamente"}
 
 # Acá definimos el modelo/estructura de datos de un curso
 class Curso(BaseModel):

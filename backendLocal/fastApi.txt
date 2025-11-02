@@ -1,3 +1,13 @@
+Nota: crea un repositorio con el entorno de render instalado, 
+y a ese repositorio es que deben hacer los juaste de main etc, 
+este repositorio no fue hecho por render, este si:
+https://github.com/meroh1/renderFastApi.git
+
+con backendLocal se lo inicia con el comando y funciona local 
+con RENDER se incia el servidorWeb y ya funciona los enpoints
+
+---------------
+
 Render
 
 crear cuanta con gitHub

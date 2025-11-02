@@ -1,16 +1,13 @@
 # FastAPI es un framework para crear APIs de manera rapida y sencilla
-#fastapi
-
-# requisito de render
 fastapi[all]
 
 # Uvicorn es un servidor ASGI para FastAPI
 # ASGI es un protocolo para comunicarse con servidores web
 # Es decir, es un servidor que puede manejar peticiones HTTP y WSGI
 uvicorn
-
 # Para instalar las dependencias, ejecutar: 
 # pip install -r requirements.txt
 
 # Para ejecutar el servidor, ejecutar:
-# uvicorn main:app --reload
+# uvicorn main:app --reload con uvicorn en PATH
+# python -m uvicorn main:app --reload sin uvicorn en PATH
