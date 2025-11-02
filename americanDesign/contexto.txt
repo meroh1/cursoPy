@@ -1,0 +1,35 @@
+libreria a necesitar
+
+	Numpy viene con openpyxl
+	pip install pandas openpyxl
+
+
+crar excel: ejecutar el archivo .py en la terminal
+	python .\creadorExcel.py
+
+#-----------------------------------
+
+DESCRIPCIÓN GENERAL DE LA COMPAÑÍA
+
+Es una compañía importante de diseños de interiores
+para edificios modernos de Estados Unidos, la cual 
+se especializa en realizar los interiores para otras
+ compañías del rubro de tecnología
+
+🎨 DISEÑOS VACOTTO
+
+La compañía le compró los diseños al famoso diseñador 
+industrial italiano Martín Vacotto el cual tiene un conjunto
+enorme de elaborados muebles y estructuras de finísimo gusto
+
+El problema que debemos resolver es que estos planos están en
+unidades métricas (centímetros) y las máquinas que usan los
+americanos están en unidades imperiales(pulgada)
+
+⚙️ SOLICITUD DEL CLIENTE
+
+La compañía nos contrató para que le generemos un programa que
+convierta todas las unidades de centímetros a pulgadas de tal
+forma de que sus trabajadores eviten problemas de cálculo y pierdan
+inversiones millonarias en materiales o en modificar las máquinas
+para trabajar los planos originales
