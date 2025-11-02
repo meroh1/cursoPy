@@ -56,6 +56,7 @@ def crear_curso(curso:Curso):
 
 
 # GET: Leeremos el curso que coincida con el ID que pidamos
+# el id del cursro a buscar se cloca el id en postman en Params ->  doce id en una tabla
 @app.get("/cursos/{curso_id}", response_model=Curso)
 def obtener_curso(curso_id:str):
     curso = next((curso for curso in cursos_db if curso.id == curso_id), None) # Con next tomamos la primera coincidencia del array devuelto
@@ -65,6 +66,7 @@ def obtener_curso(curso_id:str):
 
 
 # PUT: Modificaremos un curso que coincida con el ID que mandemos a la db
+# se colocal en postamn id del curso y json con los datos a actualizar
 @app.put("/cursos/{curso_id}", response_model=Curso)
 def actualizar_curso(curso_id:str, curso_actualizado:Curso):
 
