@@ -1,0 +1,46 @@
+CLASES
+    - de lo mas caracteristico en Poo (programacion orientada a objetos)
+    - plantilla para la creacion de objetos
+    - define los atributos y metodos de los objetos de u tipo en especifico
+    
+    combinar la encapsulacion de datos y funcionalidades relacionadas permiten:
+        - la reutilizacion de codigo
+        - organizacion modular
+        - la abstraccion
+    
+
+    METODOS
+        son bloques de codigo, los cuales encapsulan acciones o comportamientos
+        asociados a un objeto
+        - usarlos para operacione/aciones sobre los datos de los objetos
+        - puede acceder a los atributos de los objetos
+
+    ATRIBUTOS
+        datos o caracteristicas q describen el estado de un objeto en determinado
+        contexto
+        - definen las propiedades de un objeto
+
+    OBJETOS
+        - son instancias creadas especificas de una clase que encapsula  datos y
+          los comportamientos
+
+______________________________________________________
+
+ABSTRACCION 
+    modelar entidades del mundo real en code
+ENCAPSULAMIENTO
+HERENCIA
+POLIMORFISMO
+    un return de una clase, puede tener muchas formas de volverse a tranformar,
+    eso lo hace polimorfismo
+
+______________________________________________________
+
+CONVENCIONES _ __
+    se usa convenciones de nombres para el encapsulamiento:
+        - atributos que inicien con _ se lo considera protegido
+            (no deben ser accedidos directmente)
+        - atributos que inicien con __ son 'privados' (name mangling)
+
+    
+
